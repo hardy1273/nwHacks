@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
-      <Layout/>
-
-    </>
+    <div class='container-md'>
+      
+    <Layout/>
+    </div>
   )
 }
