@@ -5,7 +5,7 @@ import CardLayout from '@/components/CardLayout';
 
 function Layout() {
   return (
-    <div class="container flex flex-row mt-10 justify-content-center">
+    <div class="container flex  mt-10 ">
       <Navbar/>
       <CardLayout/>
     </div>
