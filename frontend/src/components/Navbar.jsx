@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar() {
   return (
     <div>
-      <nav class="navbar bg-body-tertiary">
+      <nav class="navbar bg-body-tertiary flex justify-content-center">
       <div class="container-fluid rounded-2">
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
