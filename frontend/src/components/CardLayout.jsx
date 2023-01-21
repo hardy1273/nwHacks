@@ -2,7 +2,20 @@ import React from 'react'
 
 const CardLayout = () => {
   return (
-    <div>CardLayout</div>
+    <div class="container text-center">
+    <div class="row flex flex-row">
+      <div class="col">
+        Column
+      </div>
+      <div class="col">
+        Column
+      </div>
+      <div class="col">
+        Column
+      </div>
+    </div>
+  </div>
+    
   )
 }
 
