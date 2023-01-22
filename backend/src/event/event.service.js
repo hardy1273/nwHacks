@@ -7,6 +7,7 @@ const addEvent =
     const name = req.body.name;
     const description = req.body.description;
     const eventType = req.body.eventType;
+    const link = req.body.link;
     const email = req.body.email;
 
 
@@ -14,6 +15,7 @@ const addEvent =
       name,
       description,
       eventType,
+      link
     });
 
     const currentUser = await UserService.getUserByEmail({
