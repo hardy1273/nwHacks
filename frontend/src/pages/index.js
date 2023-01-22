@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-   <div style={{height: "100vh"}}>
+   <div style={{height: "100%"}}>
       
     <Layout/>
     </div>
