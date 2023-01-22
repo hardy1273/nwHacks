@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import { IoMdAdd, IoMdSearch } from 'react-icons/io';
+//import { IoMdAdd, IoMdSearch } from 'react-icons/io';
 
 import "bootstrap/dist/css/bootstrap.css";
 
