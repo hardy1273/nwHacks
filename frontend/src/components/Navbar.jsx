@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 function Navbar({searchTerm, setSearchTerm, user}) {
 
-  
+  if (user) {
   return (
     <div class="flex flex-row p-50">
       <nav class="navbar bg-body-tertiary flex-row p-2  mt-10">
@@ -16,12 +16,13 @@ function Navbar({searchTerm, setSearchTerm, user}) {
           onChange={(e) => setSearchTerm(e.target.value)}
           value={searchTerm}
           />
-          
         </form>
       </div>
       </nav>
     </div>
   )
+  };
+  return null;
 }
 
 export default Navbar
