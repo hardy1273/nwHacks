@@ -5,6 +5,7 @@ import CardLayout from '@/components/CardLayout';
 import Sidebar from '@/components/Sidebar';
 
 
+
 function Layout({user}) {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -19,6 +20,9 @@ function Layout({user}) {
       
     <div class="container " styel={{height: "100vh"}}>
       <Navbar searchTerm ={searchTerm} setSearchTerm={setSearchTerm} user ={user && user}/>
+      <div className='cheesy-text' class="text-center" style={{textAlign: "center", color:"#BFD7FF"}}>
+        <h1>Insert cheesy text</h1>
+      </div>
       <CardLayout/>
     </div>
     </div>
