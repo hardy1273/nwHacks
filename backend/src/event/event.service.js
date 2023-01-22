@@ -52,10 +52,22 @@ const getEventsByEventType =
     return res.json(events);
   };
 
+  const getEventByName =
+    (Event) =>
+    async (req, res) => {
+      const eventName = req.body.name;
+      const events = await Event.find({
+        name,
+      });
+      return res.json(events);
+
+    }
+
 module.exports = (Event) => {
   return {
     addEvent: addEvent(Event),
     getEvents: getEvents(Event),
     getEventsByEventType: getEventsByEventType(Event),
+    getEventByName: getEventByName(Event),
   };
 };

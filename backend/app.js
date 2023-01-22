@@ -32,6 +32,7 @@ const UserService = require("./src/user");
 
 
 const mongoose = require("mongoose");
+const { addGoogleUser } = require("./src/user");
 
 mongoose.connect(
   process.env.MONGODB_URI,
@@ -81,7 +82,7 @@ app.get("/profile", (req, res) => {
 app.post("/api/events", EventService.addEvent);
 app.get("/api/events", EventService.getEvents);
 app.get("/api/events/filter", EventService.getEventsByEventType);
-
+app.get("/api/event/name", EventService.getEventByName);
 
 
 app.use(passport.initialize());
