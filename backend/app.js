@@ -74,8 +74,12 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.get("/profile", (req, res) => {
-  res.send("profile stub");
+const isLoggedIn = (req, res, next) => {
+  req.user ? next() : res.sendStatus(401);
+};
+
+app.get("/profile", isLoggedIn, (req, res) => {
+  res.render("profile.ejs", { user: req.user });
 });
 
 
@@ -87,6 +91,10 @@ app.get("/api/events/name", EventService.getEventByName);
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+
+
+
 
 app.get(
   "/auth/google",
@@ -107,6 +115,6 @@ app.get(
 
 
 
-app.listen(3000, function () {
-  console.log("Server listening on port 3000");
+app.listen(4000, function () {
+  console.log("Server listening on port 4000");
 });
