@@ -1,13 +1,31 @@
 require("dotenv").config();
 
+
 const express = require("express");
 const app = express();
+
+const flash = require("express-flash");
+const session = require("express-session");
+
+app.use(
+  session({
+    secret: "secr3t",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+app.use(flash());
+
+
+
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
 const passport = require("passport");
+require("./src/config/passport");
 require("./src/config/google");
-
+ 
 const mongoose = require("mongoose");
 
 mongoose.connect(
@@ -49,6 +67,11 @@ app.use(cookieParser());
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
+
+app.get("/profile", (req, res) => {
+  res.send("profile stub");
+});
+
 
 app.use(passport.initialize());
 app.use(passport.session());
