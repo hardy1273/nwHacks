@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import searchEvents from "./data"
 
 function Search() {
   const [events, setEvents] = useState([a, b ,c]);
