@@ -13,11 +13,11 @@ function Layout({user}) {
   const scrollRef = useRef(null);
 
   return (
-    <div class="d-flex " flex-row>
-      <div class="d-flex h-screen flex-initial">
+    <div class="d-flex h-screen" style={{backgroundColor: "#E2FDFF" }}>
+      
         <Sidebar user={user && user}/>
-      </div>
-    <div class="container flex  mx-100 ">
+      
+    <div class="container " styel={{height: "100vh"}}>
       <Navbar searchTerm ={searchTerm} setSearchTerm={setSearchTerm} user ={user && user}/>
       <CardLayout/>
     </div>

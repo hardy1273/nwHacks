@@ -10,7 +10,8 @@ function Sidebar({closeToggle, user}) {
       };
 
     return (
-        <div class ="d-flex mt-4 mx-0 flex-col justify-left bg-white h-full overflow-y-scroll flex-3 hide-scrollbar">
+        <div class ="d-flex flex-col justify-left px-4 pt-2 bg-white  overflow-y-scroll flex-3 hide-scrollbar"
+        style={{height:  "100%", backgroundColor: "#fffff !important" }}>
             <div class=" d-flex flex-col">
                 <Link href="/"
                 class="d-flex flex-col  gap-2 my-6 pt-1 w-190 items-center"
@@ -18,15 +19,16 @@ function Sidebar({closeToggle, user}) {
                 
                 </Link>
                 <div className="flex flex-col gap-5">
-                <p class="mt-2 fs-4 fw-bold">Discover categories</p>
+                <p class="mt-2 fs-3 fw-bold">Discover categories</p>
                 {categories.slice(0, categories.length - 1).map ((category)=> (
                     <Link
                     href={`/category/${category.name}`}
-                    class="d-flex items-center  gap-3 py-2 font-bold capitalize text-black"
+                    class="d-flex items-center py-2 gap-3 fs-4 fs-semi-bold text-black"
+                    style ={{color: "#5465FF" }}
                     onClick ={handleCloseSidebar}
                     key={category.name}
                     >
-                        <img src={category.image} class="img-fluid " style={{borderRadius: 50 , width: 20 , height: 20 }}/>
+                        <img src={category.image} class="img-fluid " style={{borderRadius: 50 , width: 30 , height: 30 }}/>
                         {category.name}
                     </Link>
                 ))}
