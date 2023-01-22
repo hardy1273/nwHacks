@@ -13,7 +13,7 @@ function Layout({user}) {
   const scrollRef = useRef(null);
 
   return (
-    <div class="d-flex h-screen" style={{backgroundColor: "#E2FDFF" }}>
+    <div class="d-flex h-screen" style={{backgroundColor: "#E2FDFF" , height: "100vh"}}>
       
         <Sidebar user={user && user}/>
       
