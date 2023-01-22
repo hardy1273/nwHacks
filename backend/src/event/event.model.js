@@ -10,6 +10,9 @@ const eventSchema = new Schema({
     type: String,
     default: null,
   },
+  link: {
+    type: String,
+  },
   eventType: {
     type: String,
     enum: ['sport', 'performance']
