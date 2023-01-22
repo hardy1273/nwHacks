@@ -8,7 +8,12 @@ function Search() {
     if (searchTerm !== '') {
       setLoading(true);
       //get query from backend 
-      const query="football";
+      searchEvents(searchTerm)
+        .then(events => {
+            setEvents(events);
+            setLoading(false);
+        })
+        .catch(err => console.log(err));
 
     } else {
       setEvents();
