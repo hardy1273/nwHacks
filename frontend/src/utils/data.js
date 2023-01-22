@@ -1,9 +1,9 @@
 let mongoose = require("mongoose");
-let userModel = require("./user.model");
+let eventModel = require("./event.model");
 
 function searchEvents(searchTerm) {
     return new Promise((resolve, reject) => {
-        userModel.find({ "eventName": { "$regex": searchTerm, "$options": "i" } }, (err, events) => {
+        eventModel.find({ "name": { "$regex": searchTerm, "$options": "i" } }, (err, events) => {
             if (err) {
                 reject(err);
             } else {
