@@ -1,6 +1,6 @@
 import React from 'react'
 import EventCard from './EventCard'
-import { Card } from "react-bootstrap";
+
 
 const CardLayout = () => {
 
@@ -11,16 +11,9 @@ const CardLayout = () => {
   ]
   return (
     <div class="container flex flex-row text-center">
-    <div class="row flex flex-row">
-      <div class="col">
-        Column
-      </div>
-      <div class="col">
-        Column
-      </div>
-      <div class="col">
-        Column
-      </div>
+    <div class="row row-cols-3">
+      {events?.map((event) => 
+      <EventCard name={event.name} description={event.description} image="https://www.google.com/search?q=football&sxsrf=AJOqlzUp0lfIDHI8BicblPRtl_DwDWqppQ:1674350778886&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjzop7bgtr8AhWiADQIHYBVBxoQ_AUoAXoECAEQAw&biw=782&bih=753&dpr=2#imgrc=K6ZrAumEgnwqXM" />)}
     </div>
   </div>   
   )

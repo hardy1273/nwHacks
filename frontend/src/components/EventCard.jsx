@@ -1,9 +1,10 @@
 import React from 'react'
 
-const EventCard = ({name, description,image}) => {
+//style="width: 18rem"
+const EventCard = ({name, description, image}) => {
   return (
-    <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src={image} alt="Card image cap"></img>
+    <div class="card" >
+    <img class="card-img-top" src="https://img.olympicchannel.com/images/image/private/f_auto/t_s_pog_staticContent_hero_xl_2x/primary/ydk9vatpnihwfquy6zq3" alt="Card image cap"/>
     <div class="card-body">
     <h5 class="card-title">{name}</h5>
     <p class="card-text">{description}</p>
