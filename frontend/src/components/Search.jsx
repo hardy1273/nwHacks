@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
 function Search() {
-  const [events, setEvents] = useState([a, b ,c]);
+  const [events, setEvents] = useState({a , b ,c });
   const [loading, setLoading] = useState(false);
 
   useEffect(()=>{
@@ -20,7 +20,7 @@ function Search() {
     <div>
       {loading && <Spinner message="Searching for events"/>}
       {events?.length !== 0 && <CardLayout events={events} /> }
-      {events?.length === 0 && searchTerm !== '' && !loadig && (
+      {events?.length === 0 && searchTerm !== '' && !loading && (
         <div class="mt-10 text-center text-xl"> No Pins Found :( </div>
       )}
     </div>
