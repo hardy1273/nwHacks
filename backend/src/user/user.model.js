@@ -23,6 +23,18 @@ const userSchema = new Schema({
     type: Date,
     default: new Date(),
   },
+  addedEvent: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'addedEvent',
+    },
+  ],
+  savedEvent: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'savedEvent',
+    },
+  ],
 });
 
 var userModel = mongoose.model("user", userSchema, "user");
