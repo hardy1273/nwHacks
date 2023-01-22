@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 import Home from '.';
-import {useEffect} from 'react';
+
 
 
 
