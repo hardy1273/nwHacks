@@ -4,7 +4,7 @@ import React from 'react'
 const EventCard = ({name, description, image}) => {
   return (
     <div class="card" >
-    <img class="card-img-top" src="https://img.olympicchannel.com/images/image/private/f_auto/t_s_pog_staticContent_hero_xl_2x/primary/ydk9vatpnihwfquy6zq3" alt="Card image cap"/>
+    <img class="card-img-top" src="https://static.toiimg.com/thumb/msid-95743162,width-1280,height-720,resizemode-4/.jpg" alt="Card image cap"/>
     <div class="card-body">
     <h5 class="card-title">{name}</h5>
     <p class="card-text">{description}</p>
