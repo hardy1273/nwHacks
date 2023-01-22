@@ -55,9 +55,9 @@ const getEventsByEventType =
   const getEventByName =
     (Event) =>
     async (req, res) => {
-      const eventName = req.body.name;
+      const name = req.body.name;
       const events = await Event.find({
-        name,
+        name: {"$regex": name },
       });
       return res.json(events);
 

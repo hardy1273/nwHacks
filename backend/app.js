@@ -82,7 +82,7 @@ app.get("/profile", (req, res) => {
 app.post("/api/events", EventService.addEvent);
 app.get("/api/events", EventService.getEvents);
 app.get("/api/events/filter", EventService.getEventsByEventType);
-app.get("/api/event/name", EventService.getEventByName);
+app.get("/api/events/name", EventService.getEventByName);
 
 
 app.use(passport.initialize());
