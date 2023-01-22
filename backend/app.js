@@ -26,7 +26,13 @@ const passport = require("passport");
 require("./src/config/passport");
 require("./src/config/google");
  
+
+const EventService = require("./src/event");
+const UserService = require("./src/user");
+
+
 const mongoose = require("mongoose");
+const { addGoogleUser } = require("./src/user");
 
 mongoose.connect(
   process.env.MONGODB_URI,
@@ -71,6 +77,12 @@ app.get("/", (req, res) => {
 app.get("/profile", (req, res) => {
   res.send("profile stub");
 });
+
+
+app.post("/api/events", EventService.addEvent);
+app.get("/api/events", EventService.getEvents);
+app.get("/api/events/filter", EventService.getEventsByEventType);
+app.get("/api/event/name", EventService.getEventByName);
 
 
 app.use(passport.initialize());

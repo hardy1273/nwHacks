@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import searchEvents from "./data"
 
 function Search() {
   const [events, setEvents] = useState({a , b ,c });
@@ -8,7 +9,12 @@ function Search() {
     if (searchTerm !== '') {
       setLoading(true);
       //get query from backend 
-      const query="football";
+      searchEvents(searchTerm)
+        .then(events => {
+            setEvents(events);
+            setLoading(false);
+        })
+        .catch(err => console.log(err));
 
     } else {
       setEvents();
